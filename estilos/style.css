@@ -43,6 +43,8 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
 }
 .fondo2 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../imagenes/Voidworm.jpg);
@@ -74,4 +76,14 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+.pies {
+    background-color: #0b111a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: sans-serif;
+    margin-top: auto;
+    width: 100%;
 }
