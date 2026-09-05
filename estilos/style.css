@@ -183,6 +183,44 @@ body {
     background-color: rgba(15, 23, 42, 0.9);
 }
 
+.contactinio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    color: #ffffff;
+    background-color: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    margin: 20px auto;
+    padding: 20px 30px;
+    max-width: fit-content;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.contactinio:hover {
+    background-color: rgba(15, 23, 42, 0.9);
+}
+
+.contactinio_titulo {
+    color: #ffffff;
+    font-size: 20px;
+    margin: 0;
+}
+
+.contacto-container img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+}
+
 .pies {
     background-color: #0b111a;
     color: white;
