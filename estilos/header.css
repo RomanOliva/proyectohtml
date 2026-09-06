@@ -1,0 +1,90 @@
+header {
+    background-color: rgba(15, 23, 42, 0.8); 
+    padding: 4px 8px; 
+    font-family: 'Ailerons', sans-serif;
+    font-size: 25px; 
+    color: var(--c-main);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+header nav section {
+    flex: 1; 
+    display: flex;
+    align-items: center;
+}
+
+header nav section:nth-child(1) {
+    justify-content: flex-start; 
+}
+
+header nav section:nth-child(2) {
+    justify-content: center; 
+    gap: clamp(20px, 5vw, 180px);
+}
+
+header nav section:nth-child(3) {
+    justify-content: flex-end; 
+    color: var(--c-tre);
+    font-size: 1.15em; 
+    text-shadow: 0 0 8px rgba(11, 235, 187, 0.3);
+}
+
+header nav section:nth-child(3) a {
+    color: var(--c-tre);
+    font-size: 1.15em;
+}
+
+header a, header h1 {
+    color: var(--c-main);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+header a:hover, header h1:hover {
+    color: var(--c-sec);
+    text-shadow: 0 0 12px rgba(0, 253, 219, 0.7);
+}
+
+@media screen and (max-width: 1024px) {
+    
+    header {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    header {
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+
+    header nav {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    header nav section {
+        width: 100%;
+        justify-content: center !important;
+    }
+
+    header nav section:nth-child(2) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 0;
+    }
+
+    header nav section:nth-child(2) a {
+        width: 45%; 
+        text-align: center;
+    }
+}

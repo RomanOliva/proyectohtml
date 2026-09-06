@@ -1,0 +1,238 @@
+@import url('https://fonts.cdnfonts.com/css/ailerons');
+
+:root{
+    --c-main: #59c2c5;
+    --c-sec: #0bebbb;
+    --c-tre: #dff800;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(63, 63, 63, 0.5), rgba(24, 73, 75, 0.5)), url(../imagenes/Voidworm.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.logo {
+    height: 65px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 6px rgba(0, 209, 178, 0.4));
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+}
+
+.parodia {
+    font-family: 'Ailerons', sans-serif;
+    font-size: 44px;
+    text-align: center;
+    color: var(--c-tre);
+    background-color: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    margin: 25px auto;
+    padding: 10px 25px;
+    max-width: fit-content;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+body.en-pagina-interna {
+    background-image: linear-gradient(rgba(63, 63, 63, 0.5), rgba(24, 73, 75, 0.5)), url(../imagenes/Voidworm.jpg);
+}
+
+.logo:hover {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 12px rgba(0, 209, 178, 0.8)) brightness(1.2);
+}
+
+/* cosas del pie de pagina */
+
+.piepagina {
+    background-color: rgba(11, 17, 26, 0.9);
+    border-top: 1px solid rgba(89, 194, 197, 0.25);
+    text-align: center;
+    padding: 8px 12px; 
+    margin-top: auto;
+    width: 100%;
+}
+
+.piepagina h4 {
+    color: var(--c-sec);
+    font-family: 'Ailerons', sans-serif;
+    font-size: 1rem; 
+    margin-bottom: 2px;
+    text-shadow: 0 0 8px rgba(11, 235, 187, 0.4);
+}
+
+.piepagina p {
+    color: var(--c-main);
+    font-family: sans-serif;
+    font-size: 0.75rem;
+    margin: 1px 0;
+    opacity: 0.9;
+}
+
+/* cosa responsiva */
+
+@media screen and (max-width: 768px) {
+
+    body {
+        background-attachment: scroll;
+    }
+
+    .parodia {
+        font-size: 1.3rem;
+        letter-spacing: 0.5px;
+        white-space: nowrap;
+        padding: 8px 16px;
+        margin: 15px auto;
+        max-width: 90%;
+    }
+
+    .piepagina {
+        padding: 5px 8px; 
+    }
+
+    .piepagina h4 {
+        font-size: 0.9rem;
+        margin-bottom: 0;
+    }
+
+    .piepagina p {
+        font-size: 0.68rem;
+        margin: 1px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .items {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* items */
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 220px));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.item {
+    background-color: rgba(15, 23, 42, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* buscador y botone */
+
+.buscador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #ffffff;
+    background-color: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    margin: 20px auto;
+    padding: 15px 30px;
+    max-width: fit-content;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+.buscador input[type="search"] {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.buscador input[type="search"]::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.buscador button {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.buscador button:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.boton-volver {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 100;
+    color: #ffffff;
+    background-color: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    font-family: sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: background-color 0.2s ease;
+}
+
+.boton-volver:hover {
+    background-color: rgba(15, 23, 42, 0.9);
+}
+
+.contactinio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    color: #ffffff;
+    background-color: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    margin: 20px auto;
+    padding: 20px 30px;
+    max-width: fit-content;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
