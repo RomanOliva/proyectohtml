@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>War-Frame</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="../estilos/header.css">
+    <link rel="stylesheet" href="../estilos/general.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <section>
+                    <h1>
+                        <a href="/index.html">
+                            <img src="imagenes/logo.webp" alt="Warframe Logo" class="logo">
+                        </a>
+                    </h1>
+            </section>
+            <section>
+                <a href="#">placeholder1</a>
+                <a href="contactenos.html">Contactennos</a>
+                <a href="inicio.html">Productos</a>
+                <a href="#">placeholder4</a>
+            </section>
+            <section>
+                <a href="login.html">Iniciar Sesión</a>
+            </section>
+            
+        </nav>
+    </header>
+
+ 
+    <main class="login-main">
+        <form id="loginillo" novalidate>
+ 
+
+
+            <div class="registro-container" id="contenedor-registro" hidden>
+                <h2 class="registro-titulo">Registrarse</h2>
+ 
+                <label for="correo-registro">Correo Electronico</label>
+                <input type="email" id="correo-registro" name="correo" placeholder="Ingrese Correo" autocomplete="email">
+                <input type="password" id="contraseña-registro" name="contraseña" placeholder="Ingrese Contraseña" autocomplete="new-password">
+                <input type="password" id="confirmar-contraseña-registro" name="confirmar-contraseña" placeholder="Confirmar Contraseña" autocomplete="new-password">
+                <p class="error-registro" id="registro-error"></p>
+                <p class="exito-registro" id="registro-exito"></p>
+ 
+                <button type="submit">Registrarse</button>
+ 
+                <p class="auth-switch">¿Ya tiene cuenta? <a href="../pages/login.html" id="ir-a-login">Inicia sesión aqui</a></p>
+            </div>
+ 
+        </form>
+    </main>
+        
+
+    <footer class="piepagina">
+        <h4>BASURA KI'TEER</h4>
+        <p>Parodia sin fines de lucro, los mejores productos del vacio.</p>
+        <p>Contacto: soporte@basurakiteer.cl</p>
+    </footer>
+
+</body>
+    <script src="../scripts/metodos.js"></script>
+</html>
