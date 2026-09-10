@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
  
-  
- 
+
     const formulario = document.querySelector('.buscador form');
     const buscador = document.getElementById('buscador');
     const contenedorItems = document.querySelector('.items');
@@ -40,34 +39,18 @@ document.addEventListener('DOMContentLoaded', () => {
  
         buscador.addEventListener('input', () => filtrarItems(buscador.value));
     }
- 
 
- 
     const formAuth = document.getElementById('loginillo');
  
     if (formAuth) {
         const contenedorLogin = document.getElementById('contenedor-login');
         const contenedorRegistro = document.getElementById('contenedor-registro');
-        const irARegistro = document.getElementById('ir-a-registro');
-        const irALogin = document.getElementById('ir-a-login');
- 
-
-        irARegistro.addEventListener('click', evento => {
-            evento.preventDefault();
-            contenedorLogin.hidden = true;
-            contenedorRegistro.hidden = false;
-        });
- 
-        irALogin.addEventListener('click', evento => {
-            evento.preventDefault();
-            contenedorRegistro.hidden = true;
-            contenedorLogin.hidden = false;
-        });
  
         formAuth.addEventListener('submit', evento => {
             evento.preventDefault();
-
-            if (!contenedorLogin.hidden) {
+ 
+            if (contenedorLogin) {
+                
                 const usuario = document.getElementById('usuario-login').value.trim();
                 const password = document.getElementById('contraseña-login').value.trim();
                 const error = document.getElementById('error-login');
@@ -80,7 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 error.textContent = '';
                 window.location.href = '../index.html';
  
-            } else {
+            } else if (contenedorRegistro) {
+               
                 const correo = document.getElementById('correo-registro').value.trim().toLowerCase();
                 const error = document.getElementById('registro-error');
                 const exito = document.getElementById('registro-exito');
