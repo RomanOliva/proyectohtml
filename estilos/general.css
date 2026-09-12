@@ -149,7 +149,30 @@ body.en-pagina-interna {
     height: auto;
     border-radius: 8px;
 }
+/* popup */
+/*
+.popup
+{
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    background: rgba(15, 23, 42, 0.95);
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    text-align: center;
+    z-index: 10;
+}
+.item:hover .popup
+{
+    display: block;
+}
 
+*/
 /* buscador y botone */
 
 .buscador {
