@@ -7,7 +7,7 @@ describe('Lógica: utils/carrito', () => {
     const conDos = agregarAlCarrito(inicial, productosDemo[0])
     const conOtro = agregarAlCarrito(conDos, productosDemo[1])
 
-    expect(inicial[0].cantidad).toBe(1)  
+    expect(inicial[0].cantidad).toBe(1)   
     expect(conDos[0].cantidad).toBe(2)
     expect(calcularTotal(conOtro)).toBe(400) 
   })

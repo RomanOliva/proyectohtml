@@ -90,7 +90,6 @@ body {
   color: #fff;
   text-align: center;
 }
-
 .item .card-img-top { border-radius: 8px; padding: 15px 15px 0; }
 
 .video-home { max-width: 800px; }
@@ -123,3 +122,68 @@ body {
 }
 .piepagina h4 { color: var(--c-sec); font-family: 'Ailerons', sans-serif; font-size: 1rem; margin-bottom: 2px; }
 .piepagina p { color: var(--c-main); font-size: .75rem; margin: 1px 0; }
+
+.cart-list { display: flex; flex-direction: column; gap: 12px; }
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 72px 1fr auto auto auto;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(89, 194, 197, 0.25);
+  border-radius: 12px;
+  transition: border-color .3s, box-shadow .3s;
+}
+.cart-item:hover {
+  border-color: var(--c-sec);
+  box-shadow: 0 0 14px rgba(11, 235, 187, 0.25);
+}
+.cart-item:not(:has(.cart-item__img)) { grid-template-columns: 1fr auto auto auto; }
+
+.cart-item__img {
+  width: 72px; height: 72px; object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.cart-item__nombre {
+  font-family: 'Ailerons', sans-serif;
+  font-size: 1.25rem;
+  color: var(--c-main);
+  margin: 0;
+}
+.cart-item__precio { margin: 0; font-size: .85rem; color: rgba(255, 255, 255, 0.65); }
+.cart-item__cantidad {
+  padding: 2px 12px;
+  font-weight: 700;
+  color: var(--c-tre);
+  background-color: rgba(223, 248, 0, 0.1);
+  border: 1px solid rgba(223, 248, 0, 0.4);
+  border-radius: 999px;
+}
+.cart-item__subtotal { margin: 0; font-weight: 600; color: var(--c-sec); white-space: nowrap; }
+
+.cart-total {
+  margin-top: 20px; padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: right;
+}
+.cart-total__texto {
+  font-family: 'Ailerons', sans-serif;
+  font-size: 1.6rem;
+  color: var(--c-tre);
+  text-shadow: 0 0 10px rgba(223, 248, 0, 0.35);
+}
+
+@media (max-width: 575.98px) {
+  .cart-item,
+  .cart-item:not(:has(.cart-item__img)) {
+    grid-template-columns: 64px 1fr;
+    gap: 8px 12px;
+  }
+  .cart-item:not(:has(.cart-item__img)) { grid-template-columns: 1fr; }
+  .cart-item__img { width: 64px; height: 64px; grid-row: span 2; }
+  .cart-item__cantidad, .cart-item__subtotal { justify-self: start; }
+  .cart-total { text-align: center; }
+}
