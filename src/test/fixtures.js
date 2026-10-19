@@ -1,4 +1,3 @@
-// Imagen mínima embebida: evita pedidos 404 al servidor de Karma
 const IMG =
   'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='
 

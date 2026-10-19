@@ -1,5 +1,3 @@
-// Funciones puras del carrito (fáciles de probar con Jasmine)
-
 export function agregarAlCarrito(carrito, producto) {
   const existe = carrito.find((item) => item.id === producto.id)
   if (existe) {

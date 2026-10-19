@@ -1,5 +1,5 @@
 function Text({ children, variant = 'p', className }) {
-  const Tag = variant // 'h1', 'h3', 'p', 'span', etc.
+  const Tag = variant 
   return <Tag className={className}>{children}</Tag>
 }
 
