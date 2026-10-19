@@ -1,13 +1,14 @@
 import { Container, Nav, Navbar } from 'react-bootstrap'
 import { Link, NavLink } from 'react-router-dom'
 import Image from '../atoms/Image'
+import { ruta } from '../../utils/ruta'
 
 function NavBar({ cantidadCarrito = 0 }) {
   return (
     <Navbar expand="md" variant="dark" className="site-header">
       <Container fluid>
         <Navbar.Brand as={Link} to="/">
-          <Image src="/imagenes/logo.webp" alt="Warframe Logo" className="logo" />
+          <Image src={ruta('imagenes/logo.webp')} alt="Warframe Logo" className="logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="menu-principal" />
         <Navbar.Collapse id="menu-principal">
