@@ -44,6 +44,10 @@ module.exports = function (config) {
         rules: [
           {
             test: /\.jsx?$/,
+            resolve: { fullySpecified: false },
+          },
+          {
+            test: /\.jsx?$/,
             exclude: /node_modules/,
             use: {
               loader: 'babel-loader',
